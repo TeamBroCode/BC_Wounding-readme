@@ -2,11 +2,9 @@
 
 As of right now, only Bro Code Version of ox_inventory is only compatible with this script. It is a bridge and storage box used to compute player injuries. You could improve your roleplay server's Medical Services by carefully using the Exports. Additionally, we intend to write a medic script to guarantee greater compatibility and extensive resource support for this script. To enable you to incorporate it into your script, callbacks and exports will be offered.
 
-You can get the **BC_Wounding** resource from [Tebex](https://brocode.tebex.io/package/6121826)
-
 ## Installation
 
-1. Download the [ox_inventory-brocode](https://github.com/TeamBroCode/ox_inventory-brocode)
+1. Download the ox_inventory-brocode from https://github.com/TeamBroCode/ox_inventory-brocode.
 2. Add the scripts (ox_inventory and BC_Wounding) to your resources folder.
 3. Edit the Config for your framework. (Currently only supports QBCore / QBOX / ESX)
 4. Please only edit the client_open if you understand with its working structure and can adjust it to your specifications. (Optional)
@@ -44,7 +42,7 @@ ensure ox_inventory
         ['RFOOT'] = { bullet = 0, severity = false, broken = false, bleeding = false },
     }
 
-    exports.BC_Wounding:ResetPlayerDamage() -- Resets the player's damage completely.
+    exports.BC_Wounding:ResetAll() -- Resets the player's damage completely.
 
     -- BodyPart: string (Refer Config.Bones), bullet: int, severity: bool, broken: bool, bleeding: bool
     exports.BC_Wounding:UpdatePlayerDamage(bodyPart, bullet, severity, broken, bleeding) -- Updates the player's damage.
